@@ -42,7 +42,7 @@ class HomePage extends Component {
                         </button>
 
                     </div>
-                    <StockComponent name="Marelli's Jellies"
+                    <StockComponent name="Business-1"
                                     sharesOwned={this.state.stockCount[0]}
                                     stockIndex='0'
                                     basePrice={this.state.basePrice[0]}
@@ -50,21 +50,45 @@ class HomePage extends Component {
                                     updateMoneyNegative={this.updateMoneyNegative}
                                     dividend={this.state.baseDividend[0]}>
                     </StockComponent>
-                    <StockComponent name="Coat's Coats"
+                    <StockComponent name="Business-2"
                                     sharesOwned={this.state.stockCount[1]}
                                     stockIndex='1'
-                                    basePrice={this.state.basePrice[0] * 20}
+                                    basePrice={this.state.basePrice[0] * 10}
                                     purchaseAmount={this.state.purchaseAmount}
                                     updateMoneyNegative={this.updateMoneyNegative}
                                     dividend={this.state.baseDividend[1]}>
                     </StockComponent>
-                    <StockComponent name="Smith's Smiths"
+                    <StockComponent name="Business-3"
                                     sharesOwned={this.state.stockCount[2]}
                                     stockIndex='2'
-                                    basePrice={this.state.basePrice[0] * 500}
+                                    basePrice={this.state.basePrice[0] * 100}
                                     purchaseAmount={this.state.purchaseAmount}
                                     updateMoneyNegative={this.updateMoneyNegative}
                                     dividend={this.state.baseDividend[2]}>
+                    </StockComponent>
+                    <StockComponent name="Business-4"
+                                    sharesOwned={this.state.stockCount[3]}
+                                    stockIndex='3'
+                                    basePrice={this.state.basePrice[1] * 1}
+                                    purchaseAmount={this.state.purchaseAmount}
+                                    updateMoneyNegative={this.updateMoneyNegative}
+                                    dividend={this.state.baseDividend[3]}>
+                    </StockComponent>
+                    <StockComponent name="Business-5"
+                                    sharesOwned={this.state.stockCount[4]}
+                                    stockIndex='4'
+                                    basePrice={this.state.basePrice[1] * 12}
+                                    purchaseAmount={this.state.purchaseAmount}
+                                    updateMoneyNegative={this.updateMoneyNegative}
+                                    dividend={this.state.baseDividend[4]}>
+                    </StockComponent>
+                    <StockComponent name="Business-6"
+                                    sharesOwned={this.state.stockCount[5]}
+                                    stockIndex='5'
+                                    basePrice={this.state.basePrice[1] * 150}
+                                    purchaseAmount={this.state.purchaseAmount}
+                                    updateMoneyNegative={this.updateMoneyNegative}
+                                    dividend={this.state.baseDividend[5]}>
                     </StockComponent>
                 </div>
             </React.Fragment>

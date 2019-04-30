@@ -11,11 +11,12 @@ class App extends Component {
       super(props)
         this.state = {
           money: 0.0,
-          basePrice: [1,100,10000,1000000,100000000],  // base price for purchasing all 5 teirs of stocks
-          baseDividend: [.01,.25,7.5,.04,.05,.06,.07,.08,.09,.10,.11,.12,.13,.14,.15],            // base yeild for each teir of stock
+          basePrice: [1,2000,10000,1000000,100000000],  // base price for purchasing all 5 teirs of stocks
+          baseDividend: [.01,.11,1.2,25,312,4050,.07,.08,.09,.10,.11,.12,.13,.14,.15],            // base yeild for each teir of stock
           stockCount: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], // stock count.  3 counts for each tier 15 in total
           purchaseAmount: 1,
-          timeInterval: 1000
+          timeInterval: 1000,
+          incomePerUpdate: 0,
         }
         this.updateMoneyPositive = this.updateMoneyPositive.bind(this) 
         this.updateMoneyNegative = this.updateMoneyNegative.bind(this)
@@ -47,6 +48,7 @@ class App extends Component {
       }
     }
     this.setState ({
+      incomePerUpdate: sum,
       money: this.state.money + sum
     })
   }
@@ -57,7 +59,9 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <WebpageHeader/>
-          <WebpageSideNav money={this.state.money}/>
+          <WebpageSideNav money={this.state.money}
+                          timeInterval={this.state.timeInterval}
+                          incomePerUpdate={this.state.incomePerUpdate}/>
           <Switch>
             <Route exact path="/">
               <HomePage updateMoneyPositive={this.updateMoneyPositive}
