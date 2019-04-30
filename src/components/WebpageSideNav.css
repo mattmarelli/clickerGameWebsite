@@ -1,0 +1,15 @@
+.SideBar {
+    width: 150px;
+    height: 100vmin;
+    margin: 0;
+    background-color: royalblue;
+    display: flex;
+    float: left;
+}
+
+.MoneyDisplay {
+    margin-left: 5px;
+    height: 50px;
+    width: 140px;
+    background-color: gray;
+}

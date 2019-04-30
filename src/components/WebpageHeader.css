@@ -1,0 +1,7 @@
+.Header {
+    display: flex;
+    background-color: royalblue;
+    height: 50px;
+    width: auto;
+    font-size: calc(20px + 2vmin);
+}

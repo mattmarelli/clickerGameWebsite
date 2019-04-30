@@ -1,0 +1,21 @@
+.mainDisplay {
+    height: 100vmin;
+    margin-left: 150px;
+    background-color: #282c34;
+}
+
+.clickForMoney {
+    margin-top: 25px;
+    height: 25px;
+    margin-left: 25px;
+    width: 150px;
+    background-color: gray;
+    float: left;
+}
+
+.clickDisplay {
+    height: 150px;
+    width: auto;
+    background-color:  #282c34;
+    float: top;
+}
