@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { program } from '@babel/types';
 import './WebpageHeader.css';
+import { Link } from 'react-router-dom';
 
 class WebpageHeader extends Component {
     constructor(props) {
@@ -11,9 +12,11 @@ class WebpageHeader extends Component {
         
         return(
             <React.Fragment>
-                <div className="Header">
-                    Dividend Clicker
-                </div>
+                <Link to="/">
+                    <div className="Header">
+                        Dividend Clicker
+                    </div>
+                </Link>
             </React.Fragment>
         )
 

@@ -4,14 +4,15 @@ import './App.css';
 import WebpageHeader from './components/WebpageHeader';
 import WebpageSideNav from './components/WebpageSideNav';
 import HomePage from './components/HomePage'
+import BusinessInformationPage from './components/BusinessInformationPage'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
       super(props)
         this.state = {
-          money: 0.0,
-          basePrice: [1,2000,10000,1000000,100000000],  // base price for purchasing all 5 teirs of stocks
+          money: 1.0,
+          basePrice: [1,10,100,2000,24000,300000,0,0,0,0,0,0,0,0,0],  // base price for purchasing all 15 teirs of stocks
           baseDividend: [.01,.11,1.2,25,312,4050,.07,.08,.09,.10,.11,.12,.13,.14,.15],            // base yeild for each teir of stock
           stockCount: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], // stock count.  3 counts for each tier 15 in total
           purchaseAmount: 1,
@@ -53,6 +54,16 @@ class App extends Component {
     })
   }
 
+  componentDidMount() {
+    var interval = setInterval(()=>this.updateMoney(), this.state.timeInterval)
+    this.setState ({
+        interval: interval
+    });
+  }
+
+  componentWillUnmount() {
+      clearInterval(this.state.interval);
+  }
 
   render() {
     return (
@@ -72,6 +83,9 @@ class App extends Component {
                         stockCount={this.state.stockCount}
                         baseDividend={this.state.baseDividend}
                         basePrice={this.state.basePrice}/>
+            </Route>
+            <Route path="/businessInformation/">
+              <BusinessInformationPage/>
             </Route>
           </Switch>
         </div>
